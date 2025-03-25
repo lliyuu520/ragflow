@@ -25,11 +25,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
-import { Graph, Node, Shape } from '@antv/x6'
+import {onMounted, ref} from 'vue'
+import {Graph, Node, Shape} from '@antv/x6'
 import IconLeft from '../icons/IconLeft.vue'
-import { useUserStore } from '../stores/user'
-import { register } from '@antv/x6-vue-shape'
+import {useUserStore} from '../stores/user'
+import {register} from '@antv/x6-vue-shape'
 import StartNode from '../node/StartNode.vue'
 import KnowledgeNode from '../node/KnowledgeNode.vue'
 import createPortsConfig from '../parameter/ports.ts'
@@ -43,6 +43,7 @@ import ConditionNode from '../node/ConditionNode.vue'
 import HubNode from '../node/HubNode.vue'
 import ConvertNode from '../node/ConvertNode.vue'
 import NoteNode from '../node/NoteNode.vue'
+import CycleNode from "../node/CycleNode.vue";
 
 const userStore = useUserStore()
 const saveTime = ref('2025-03-14 14:39:20')
@@ -70,6 +71,7 @@ onMounted(() => {
     register({ shape: 'hub-node', component: HubNode })
     register({ shape: 'convert-node', component: ConvertNode })
     register({ shape: 'note-node', component: NoteNode })
+    register({shape: 'cycle-node', component: CycleNode})
 
     graph = new Graph({
       container: container.value,

@@ -2,29 +2,21 @@
 <template>
   <div class="custom-node">
     <div class="run">
-      <IconPlay width=".75rem" height=".75rem" class="cursor-pointer" />
+      <IconRefresh class="cursor-pointer" height=".75rem" width=".75rem"/>
       <span class="cursor-pointer">运行结果</span>
     </div>
     <div class="content">
-      <IconMerge width="1.5em" height="1.5em" color="rgb(153, 100, 100)" />
-      <span class="node-label" v-bind="$attrs">生成回答</span>
+      <span class="node-label" v-bind="$attrs">循环</span>
     </div>
     <div class="parameters">
       <div class="condition-block">
-        <IconDeepseek width="20" height="20" />
-        <span>deepseek-chat</span>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import IconMerge from '../icons/IconMerge.vue'
-import IconPlay from '../icons/IconPlay.vue'
-import IconDeepseek from '../icons/IconDeepseek.vue'
-
-
-
+import IconRefresh from "../icons/IconRefresh.vue";
 </script>
 
 <style scoped>
