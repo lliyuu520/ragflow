@@ -1,0 +1,76 @@
+<!-- 生成回答 -->
+<template>
+  <div class="custom-node">
+    <div class="run">
+      <IconPlay width=".75rem" height=".75rem" class="cursor-pointer" />
+      <span class=" cursor-pointer">运行结果</span>
+    </div>
+    <div class="content">
+      <IconAnt width="1.5em" height="1.5em" color="rgb(110, 84, 148)" />
+      <span class="node-label" v-bind="$attrs">关键词</span>
+    </div>
+    <div class="parameters">
+      <div class="condition-block">
+        <IconDeepseek width="20" height="20" />
+        <span>deepseek-chat</span>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script lang="ts" setup>
+import IconAnt from '../icons/IconAnt.vue'
+import IconPlay from '../icons/IconPlay.vue'
+import IconDeepseek from '../icons/IconDeepseek.vue'
+</script>
+
+<style scoped>
+.custom-node {
+  padding: 10px;
+  background: #fff;
+  box-shadow: -6px 0 12px #b3b1b114, -3px 0 6px -4px #0000001f, -6px 0 16px 6px #0000000d;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.custom-node .run {
+  display: flex;
+  color: rgb(37 99 235);
+  justify-content: right;
+  align-items: center;
+  gap: .5rem;
+  font-size: 10px;
+  padding-bottom: .25rem;
+}
+
+.custom-node .content {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.node-label {
+  color: #333;
+  font-size: .875rem;
+}
+
+.parameters {
+  display: grid;
+  padding-top: 8px;
+  gap: 8px;
+  box-sizing: border-box;
+  align-items: stretch;
+}
+
+.parameters .condition-block {
+  gap: 6px;
+  border-radius: 4px;
+  padding: 6px;
+  background: rgba(150, 150, 150, .1);
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+</style>
